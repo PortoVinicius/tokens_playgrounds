@@ -18,7 +18,7 @@ for i in range(len(tokens)-2):
     trigrams.append((tokens[i], tokens[i+1], tokens[i+2]))
 
 # --- 4. Embeddings simples ---
-embedding_dim = 4
+embedding_dim = 3
 embeddings = np.random.rand(len(vocab), embedding_dim)
 
 # --- 5. Função de attention ---
