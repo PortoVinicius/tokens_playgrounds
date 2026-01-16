@@ -21,7 +21,7 @@ W = np.array([
 ])
 
 # ---- Escolha do token atual (ex: "carro") ----
-token_atual = "carro"
+token_atual = "pai"
 
 Q = embeddings[token_atual] @ W
 
