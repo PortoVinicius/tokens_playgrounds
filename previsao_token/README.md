@@ -18,4 +18,9 @@ palavra_atual -> {proxima_palavra: contagem}
 
 ## dado um token, prevê o próximo
 
+- uma LLM prevê o próximo token
+- tokens podem ser palavras ou números
+- probabilidades surgem de repetição
+- não existe "pensamento", só estatística
+
 next_token_model.py ==> “cérebro primitivo”

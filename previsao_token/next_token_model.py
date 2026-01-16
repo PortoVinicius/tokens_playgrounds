@@ -1,5 +1,6 @@
 from collections import defaultdict
 import random
+from collections import Counter
 
 # Texto de treino (pequeno e repetitivo de propósito)
 texto = """
@@ -24,7 +25,15 @@ for i in range(len(tokens) - 1):
 def prever_proximo(token):
     if token not in modelo:
         return None
-    return random.choice(modelo[token])
+
+    contagem = Counter(modelo[token])
+    total = sum(contagem.values())
+
+    print("\nProbabilidades:")
+    for palavra, qtd in contagem.items():
+        print(f"{palavra}: {qtd / total:.2f}")
+
+    return contagem.most_common(1)[0][0]
 
 # 4. Teste interativo
 while True:
