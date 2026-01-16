@@ -40,7 +40,7 @@ def softmax(x, T=1.0):
     return e_x / e_x.sum()
 
 # --- 7. Geração ---
-def gerar(context, max_tokens=5, T=1.0):
+def gerar(context, max_tokens=5, T=1.5):
     generated = list(context)
     for _ in range(max_tokens):
         context_vecs = np.array([embeddings[word2idx[w]] for w in generated[-2:]])
